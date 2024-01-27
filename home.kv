@@ -1,0 +1,51 @@
+MDScreen:
+    name: "Home"
+    MDFloatLayout:
+        md_bg_color: "black"
+        Label:
+            text:'VIMOWEB'
+            color: "white"
+            font_size: 50
+            bold: True
+            pos_hint: {"center_x": 0.5, "center_y": 0.9}
+        Label:
+            id: reply
+            text: 'Have a nice day'
+            color: "dodgerblue"
+            font_size: 20
+            bold: True
+            size_hint: None, None
+            size: root.width * 0.8, dp(50)
+            multiline: True
+            halign: 'center'
+            valign: 'middle'
+            pos_hint: {"center_x": 0.5, "center_y": 0.6}
+
+            pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        MDCard:
+            size_hint: 0.2,0.13
+            orientation: "vertical"
+            pos_hint: {"center_x": 0.85, "center_y": 0.85}
+            md_bg_color: "lightgreen"
+                
+            MDLabel:
+                id: times
+                text: "Time : 02 : 34 PM"
+                color: "black"
+                halign: "center"
+                bold: True
+            MDLabel:
+                id: dates
+                text: "Date : 01/02/2024"
+                color: "black"
+                halign: "center"
+                bold: True
+
+        MDFloatingActionButton:
+            icon: "microphone"
+            md_bg_color: "black"
+            text_color: "gold"
+            size_hint: None, None
+            size: "200dp","200dp"
+            pos_hint: {"center_x": 0.5, "center_y": 0.2}
+            on_release: app.recognize()
